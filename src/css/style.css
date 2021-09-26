@@ -50,7 +50,6 @@ body {
 
 .modal {
     max-width: 1040px;
-    height: fit-content;
     padding: 24px;
     border-radius: 16px;
     background-color: #fff;
@@ -60,7 +59,7 @@ body {
 
 .modal__content {
     margin-top: 40px;
-    width: 573px;
+    margin-bottom: 40px;
 }
 
 .modal__content-top {
@@ -102,28 +101,31 @@ body {
     background-color: var(--primary-color-lighter);
 }
 
-.balance__container {
+.balance {
     min-width: 196px;
     min-height: 68px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 8px 68px 8px 16px;
+    padding: 8px 16px;
     border-radius: 16px;
     background-color: var(--balance-background);
 }
 
-.balance__container::after {
+.balance::after {
     content: '';
     width: 40px;
-    height: 41px;
+    height: 40px;
     display: block;
-    position: absolute;
-    right: 16px;
-    bottom: 14px;
     background-image: url(../assets/balance_icon.png);
+}
+
+.balance__container {
+    display: flex;
+    flex-direction: column;
 }
 
 .balance__container-title {
@@ -137,7 +139,7 @@ body {
 
 .colors-title,
 .sizes-title {
-    margin-top: 24px;
+    margin-top: 16px;
     font-size: 14px;
     margin-bottom: 8px;
     font-weight: 400;
@@ -161,10 +163,11 @@ body {
 
 .color-label {
     color: var(--primary-color);
-    display: block;
+    display: flex;
     min-height: 40px;
-    padding: 8px 12px 8px 39px;
+    padding: 8px 12px 8px 8px;
     margin-right: 8px;
+    margin-bottom: 8px;
     border-radius: 8px;
     border: 1px solid #1c181910;
     transition: background-color 300ms ease-out;
@@ -175,12 +178,10 @@ body {
 .color-label::before {
     content: '';
     display: block;
-    width: 23px;
+    width: 24px;
     height: 24px;
     border-radius: 4px;
-    position: absolute;
-    left: 8px;
-    top: 8px;
+    margin-right: 8px;
     background-color: gray;
 }
 
@@ -203,7 +204,9 @@ body {
     border-radius: 8px;
     border: 1px solid #1c181910;
     margin-right: 8px;
+    margin-bottom: 8px;
     min-width: 40px;
+    max-height: 40px;
     text-align: center;
     cursor: pointer;
     transition: background-color 300ms ease-out;
@@ -217,6 +220,7 @@ body {
 
 .detail-title,
 .help-title {
+    font-size: 14px;
     font-weight: 600;
     margin-top: 24px;
     margin-bottom: 4px;
@@ -232,12 +236,14 @@ body {
     margin-top: 16px;
     display: flex;
     flex-wrap: wrap;
+    max-width: 330px;
     justify-content: center;
 }
 
 .all-images img {
     border-radius: 8px;
     margin-right: 8px;
+    margin-bottom: 8px;
     cursor: pointer;
 }
 
@@ -251,16 +257,16 @@ body {
 
 .modal__close-btn {
     box-sizing: content-box;
-    width: 18.68px;
-    height: 18.68px;
-    padding: 6.67px;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
     margin: 0;
     background-color: #fff;
     border: none;
     background-image: url(../assets/close.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 18.68px;
+    background-size: 24px;
     opacity: 0.6;
     cursor: pointer;
     transition: opacity 300ms ease-out;
