@@ -1,0 +1,22 @@
+.main {
+    min-height: calc(100vh - 200px);
+
+    & > .container {
+        @include flex;
+
+        height: 100%;
+    }
+
+    &__nav {
+        height: 100%;
+        min-width: 250px;
+        margin-right: $xxl-margin;
+        margin-bottom: $xxl-margin;
+    }
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        margin-bottom: $xxl-margin;
+    }
+}

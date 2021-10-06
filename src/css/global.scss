@@ -1,0 +1,59 @@
+* {
+    font-family: $open-sans;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    @include font(14px, 24px);
+
+    color: $black;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+    background-color: $white;
+}
+
+.container {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: $lg-padding $xxl-padding;
+    position: relative;
+}
+
+.btn {
+    padding: $md-padding $lg-padding;
+    border-radius: $md-border-radius;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include font(16px, 24px);
+
+    &--small {
+        @include font(14px, 24px);
+    }
+
+    &--large {
+        padding: $md-padding $xl-padding;
+        border-radius: $lg-border-radius;
+
+        @include font(20px, 32px, 600);
+    }
+
+    &--half-green {
+        background-color: $half-green;
+    }
+
+    &--half-yellow {
+        background-color: $half-yellow;
+    }
+
+    &--half-blue {
+        background-color: $half-blue;
+    }
+}

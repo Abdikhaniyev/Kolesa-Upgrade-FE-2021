@@ -1,0 +1,16 @@
+.user-menu {
+    &__avatar {
+        border-radius: 50%;
+        margin-right: $lg-margin;
+    }
+
+    &__name {
+        @include font(14px, 24px, 600);
+
+        color: $blue;
+    }
+
+    &__scores {
+        @include font(13px, 20px);
+    }
+}
