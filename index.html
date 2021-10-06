@@ -1,102 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="app">
-        <div class="container">
-            <div class="overlay"></div>
-
-            <div class="modal">
-            <div class="modal__images">
-                <div class="active-image">
-                    <img alt="active image" src="/src/assets/image_1.png" width="330" height="330">
+        <header class="header">
+            <div class="container">
+                <div class="header__logo">
+                    <img src="/src/assets/logo.svg" alt="Brand logo" width="215" height="35">
                 </div>
-
-                <div class="all-images">
-                    <img alt="image" src="/src/assets/image_2.png" width="50" height="50">
-                    <img class="active" alt="image" src="/src/assets/image_3.png" width="50" height="50">
-                    <img alt="image" src="/src/assets/image_4.png" width="50" height="50">
+                <div class="header__search">
+                    <button type="button">
+                        <img src="/src/assets/search.svg" alt="search">
+                    </button>
+                    <input type="text" name="search" placeholder="Поиск">
                 </div>
+                <button class="header__user-menu">
+                    <img class="user-menu__avatar" src="/src/assets/avatar.png" alt="Avatar" width="44" height="44">
+                    <div class="user-menu__contaner">
+                        <div class="user-menu__name">Мортиджан</div>
+                        <div class="user-menu__scores">300 баллов</div>
+                    </div>
+                </button>
             </div>
+        </header>
 
-            <div class="modal__content">
-                <div class="modal__content-top">
-                <h2 class="title">
-                    Футболка "Эволюционируй или сдохни"
-                </h2>
+        <main class="main">
+            <div class="container">
+                <nav class="main__nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <a href="#">Оргсхема</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#">Kolesa <b>Team</b></a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="active" href="#">Kolesa Shop</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#">Картина компании</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#">Новости</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#">Education</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#">Guidelines</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#">Библиотека</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
 
-                <span class="scores">100 баллов</span>
-
-                <button type="button" class="action">Заказать</button>
-
-                <div class="balance">
-                    <div class="balance__container">
-                        <span class="balance__container-title">
-                            Твой баланс:
-                        </span>
-                        <span class="balance__container-value">
-                            3 945 баллов
-                        </span>
-                    </div>
-                </div>
-                </div>
-
-                <div class="modal__content-bottom">
-                    <h3 class="colors-title">Цвета:</h3>
-
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="color-input" type="radio" name="color" id="blue-color" checked>
-                            <label class="color-label" for="blue-color">Синий</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="color-input" type="radio" name="color" id="beige-color">
-                            <label class="color-label" for="beige-color">Бежевый</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="color-input" type="radio" name="color" id="gray-color">
-                            <label class="color-label" for="gray-color">Серый</label>
-                        </div>
-                    </div>
-
-                    <h3 class="sizes-title">Размер:</h3>
-
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="size-input" type="radio" name="size" id="s-size" checked>
-                            <label class="size-label" for="s-size">S</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="size-input" type="radio" name="size" id="m-size">
-                            <label class="size-label" for="m-size">M</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="size-input" type="radio" name="size" id="l-size">
-                            <label class="size-label" for="l-size">L</label>
+                <div class="main__content">
+                    <div class="main__content-banner">
+                        <div class="content-banner__container">
+                            <h2 class="content-banner__title">Летняя распродажа -50%</h2>
+                            <p class="content-banner__description">Дедлайн: понедельник, 10:00</p>
                         </div>
                     </div>
 
-                    <h3 class="detail-title">Детали:</h3>
-                    <p>Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%</p>
+                    <div class="main__content-help-btns">
+                        <button class="help-btn get" type="button">Получить баллы</button>
+                        <button class="help-btn help" type="button">Как получить баллы</button>
+                        <button class="help-btn gift" type="button">Подарить баллы</button>
+                    </div>
 
-                    <h3 class="help-title">Как выбрать размер:</h3>
-                    <p>Написать дяде Рику для уточнения.</p>
+                    <div class="main__content-products">
+                        <ul class="products-filter">
+                            <li class="products-filter__item active"><button>Все товары</button></li>
+                            <li class="products-filter__item"><button>Одежда</button></li>
+                            <li class="products-filter__item"><button>Аксессуары</button></li>
+                        </ul>
+
+                        <div class="products__container">
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <span class="product__card-badge">New</span>
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Футболка "Эволюционируй или сдохни"</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <span class="product__card-badge">New</span>
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Футболка "Эволюционируй или сдохни"</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Футболка "Эволюционируй или сдохни"</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Свитшот</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Свитшот</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Свитшот</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Свитшот</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Свитшот</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Свитшот</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Свитшот</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Свитшот</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="product__card-header">
+                                    <img class="product__card-img" src="/src/assets/product.png" alt="product">
+                                </div>
+                                <div class="product__card-body">
+                                    <div class="product__card-price">220 баллов</div>
+                                    <div class="product__card-name">Свитшот</div>
+                                    <div class="product__card-size">Размеры S/M/L</div>
+                                    <button type="button" class="product__card-action">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </main>
 
-            <button class="modal__close-btn" type="button"></button>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__left">
+                    <p class="footer__rights">&copy; Kolesa Group</p>
+                    <ul class="footer__socials">
+                        <li class="footer__social-link">
+                            <a href="#">
+                                <img src="/src/assets/inst.svg" alt="instagram logo">
+                            </a>
+                        </li>
+                        <li class="footer__social-link">
+                            <a href="#">
+                                <img src="/src/assets/youtube.svg" alt="youtube logo">
+                            </a>
+                        </li>
+                        <li class="footer__social-link">
+                            <a href="#">
+                                <img src="/src/assets/vk.svg" alt="vk logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__right">
+                    <p>
+                        Есть идеи что улучшить?<br>
+                        Не знаешь, с кем решить проблему?
+                    </p>
+                    <a href="mailto:alisher147741@gmail.com">Написать</a>
+                </div>
             </div>
-          </div>
+        </footer>
     </div>
     <script type="module" src="/src/js/main.js"></script>
-  </body>
+</body>
+
 </html>
