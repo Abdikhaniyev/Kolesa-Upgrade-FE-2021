@@ -1,0 +1,28 @@
+.main-header {
+    & > .container {
+        @include flex($align-items: center);
+    }
+
+    &__logo {
+        min-width: 250px;
+        margin-right: $xxl-margin;
+
+        @include flex($align-items: center);
+    }
+
+    &__search {
+        width: 100%;
+
+        @include flex;
+    }
+
+    &__user-menu {
+        margin-left: $xxl-margin;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        text-align: left;
+
+        @include flex($align-items: center);
+    }
+}
