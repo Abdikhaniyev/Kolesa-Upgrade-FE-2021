@@ -56,4 +56,24 @@ body {
     &--half-blue {
         background-color: $half-blue;
     }
+
+    &--primary {
+        color: $white;
+        background-color: $blue;
+    }
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: $black;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+
+    &.active {
+        display: block;
+    }
 }
