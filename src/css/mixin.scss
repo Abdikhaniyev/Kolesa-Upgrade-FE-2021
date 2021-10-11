@@ -8,8 +8,9 @@
     font-weight: $weight;
 }
 
-@mixin flex($align-items: normal, $justify-content: flex-start) {
+@mixin flex($align-items: normal, $justify-content: flex-start, $flex-direction: row) {
     display: flex;
     align-items: $align-items;
     justify-content: $justify-content;
+    flex-direction: $flex-direction;
 }
