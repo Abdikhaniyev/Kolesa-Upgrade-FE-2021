@@ -115,24 +115,21 @@ const accessories = [
 ];
 
 const container = document.querySelector('.js__products__container');
+
 const allProducts = [...clothes, ...accessories];
 
 // sort all arrays
 const sortProducts = (array) => {
-    array.sort((a, b) => {
-        if (a.isNew > b.isNew) {
-            return -1;
-        }
-
-        return 1;
-    });
+    array.sort((a, b) => (a.isNew > b.isNew ? -1 : 1));
 };
 
 sortProducts(allProducts);
 sortProducts(clothes);
 sortProducts(accessories);
 
-const makeProductCard = (id, title, price, sizes, image, isNew) => {
+const makeProductCard = ({
+    id, title, price, sizes, image, isNew,
+}) => {
     // Create element
     const card = document.createElement('div');
     const cardHeader = document.createElement('div');
@@ -168,7 +165,9 @@ const makeProductCard = (id, title, price, sizes, image, isNew) => {
     card.append(cardHeader);
     card.append(cardBody);
 
-    if (isNew) cardHeader.append(cardBadge);
+    if (isNew) {
+        cardHeader.append(cardBadge);
+    }
 
     cardHeader.append(cardImage);
 
@@ -227,29 +226,28 @@ const addEventListenerToModal = () => {
             overlay.classList.add('active');
 
             const product = allProducts.find(
-                item => parseInt(item.id, 10) === parseInt(card.id, 10),
+                item => Number(item.id) === Number(card.id),
             );
 
-            console.log(product);
-            makeModalWindow(product);
+            if (product) {
+                makeModalWindow(product);
+            }
         });
     });
 };
 
 [modalActionBtn, modalCloseBtn, overlay].forEach((element) => {
-    element.addEventListener('click', () => {
-        modal.classList.remove('active');
-        overlay.classList.remove('active');
-    });
+    if (element) {
+        element.addEventListener('click', () => {
+            modal.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    }
 });
 
 const renderProducts = (products) => {
     products.forEach((product) => {
-        const {
-            id, title, price, sizes, image, isNew,
-        } = product;
-
-        const card = makeProductCard(id, title, price, sizes, image, isNew);
+        const card = makeProductCard(product);
 
         container.append(card);
     });
