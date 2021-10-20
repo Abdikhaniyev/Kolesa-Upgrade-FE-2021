@@ -1,0 +1,57 @@
+.footer {
+    width: 100%;
+    background-color: $black;
+    color: $white;
+
+    & > .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @include flex($justify-content: space-between);
+    }
+
+    &__rights {
+        margin-bottom: $md-margin;
+
+        @include font(16px, 24px);
+    }
+
+    &__socials {
+        list-style: none;
+
+        @include flex($align-items: center);
+    }
+
+    &__social-link {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-right: $md-margin;
+    }
+
+    &__right {
+        @include flex($align-items: center);
+    }
+
+    &__text {
+        margin-right: $xxl-margin;
+
+        @include font(14px, 24px);
+    }
+
+    &__link {
+        color: $blue;
+        text-decoration: none;
+        padding: $md-padding $lg-padding;
+        border-radius: $md-border-radius;
+        background-color: $white;
+
+        @include font(14px, 24px);
+        @include transition(color);
+
+        &:hover {
+            color: $white;
+            background-color: $blue;
+        }
+    }
+}
