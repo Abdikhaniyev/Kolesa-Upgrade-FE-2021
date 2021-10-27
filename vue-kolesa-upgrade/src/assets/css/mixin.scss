@@ -1,0 +1,16 @@
+@mixin transition($property, $seconds: 300ms, $animation: ease-out) {
+    transition: $property $seconds $animation;
+}
+
+@mixin font($size, $height, $weight: 400) {
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+}
+
+@mixin flex($align-items: normal, $justify-content: flex-start, $flex-direction: row) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+}
