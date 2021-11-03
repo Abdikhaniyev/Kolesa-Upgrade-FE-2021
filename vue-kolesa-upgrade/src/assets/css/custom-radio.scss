@@ -1,61 +1,79 @@
 .custom-radio {
-    &__input {
-        display: none;
+  &__input {
+    display: none;
 
-        &:checked ~ .custom-radio__label {
-            color: $black;
-            background-color: $lighter-blue;
-            border-color: transparent;
-        }
+    &:checked ~ .custom-radio__label {
+      color: $black;
+      background-color: $lighter-blue;
+      border-color: transparent;
     }
+  }
 
-    &__label {
-        color: $blue;
-        min-height: 40px;
-        width: 40px;
-        text-align: center;
-        padding: $md-padding;
+  &__label {
+    color: $blue;
+    min-height: 40px;
+    width: 40px;
+    text-align: center;
+    padding: $md-padding;
+    margin-right: $md-margin;
+    margin-bottom: $md-margin;
+    border-radius: $md-border-radius;
+    border: 1px solid rgba($black, 0.1);
+    position: relative;
+    cursor: pointer;
+
+    @include flex($align-items: center, $justify-content: center);
+    @include transition(background-color);
+
+    &--preview {
+      width: auto;
+      padding-right: $lg-padding;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: $sm-border-radius;
         margin-right: $md-margin;
-        margin-bottom: $md-margin;
-        border-radius: $md-border-radius;
-        border: 1px solid rgba($black, 0.1);
-        position: relative;
-        cursor: pointer;
-
-        @include flex($align-items: center, $justify-content: center);
-        @include transition(background-color);
-
-        &--preview {
-            width: auto;
-            padding-right: $lg-padding;
-
-            &::before {
-                content: '';
-                display: block;
-                width: 24px;
-                height: 24px;
-                border-radius: $sm-border-radius;
-                margin-right: $md-margin;
-                background-color: $gray;
-            }
-        }
-
-        &--blue {
-            &::before {
-                background-color: $cloth-blue;
-            }
-        }
-
-        &--beige {
-            &::before {
-                background-color: $cloth-beige;
-            }
-        }
-
-        &--gray {
-            &::before {
-                background-color: $cloth-gray;
-            }
-        }
+        background-color: $gray;
+      }
     }
+
+    &--blue {
+      &::before {
+        background-color: $cloth-blue;
+      }
+    }
+
+    &--beige {
+      &::before {
+        background-color: $cloth-beige;
+      }
+    }
+
+    &--gray {
+      &::before {
+        background-color: $cloth-gray;
+      }
+    }
+
+    &--black {
+      &::before {
+        background-color: $cloth-black;
+      }
+    }
+
+    &--azure {
+      &::before {
+        background-color: $cloth-azure;
+      }
+    }
+
+    &--red {
+      &::before {
+        background-color: $cloth-red;
+      }
+    }
+  }
 }

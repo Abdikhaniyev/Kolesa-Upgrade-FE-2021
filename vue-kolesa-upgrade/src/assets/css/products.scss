@@ -1,45 +1,46 @@
 .products {
-    &__filter-list {
-        margin-bottom: $lg-margin;
-        list-style: none;
+  &__filter-list {
+    margin-bottom: $lg-margin;
+    list-style: none;
 
-        @include flex($align-items: center);
+    @include flex($align-items: center);
+  }
+
+  &__filter-btn {
+    color: $blue;
+    border: 1px solid rgba($black, 0.1);
+    display: block;
+    margin-right: $md-margin;
+    background-color: $white;
+
+    @include transition(color);
+
+    &.active {
+      color: $black;
+      background-color: $lighter-blue;
+      border-color: transparent;
     }
 
-    &__filter-btn {
-        color: $blue;
-        border: 1px solid rgba($black, 0.1);
-        display: block;
-        margin-right: $md-margin;
-        background-color: $white;
-
-        @include transition(color);
-
-        &.active {
-            color: $black;
-            background-color: $lighter-blue;
-            border-color: transparent;
-        }
-
-        &:hover {
-            color: $black;
-            background-color: $lighter-blue;
-        }
+    &:hover {
+      color: $black;
+      background-color: $lighter-blue;
     }
+  }
 
-    &__container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: $xl-margin;
-        margin-bottom: $xxl-margin;
-    }
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $xl-margin;
+    margin-bottom: $xxl-margin;
+  }
 
-    &__card {
-        background-color: $white;
-        cursor: pointer;
-        border-radius: $md-border-radius;
-        margin-bottom: -44px;
+  &__card {
+    background-color: $white;
+    cursor: pointer;
+    border-radius: $md-border-radius;
+    margin-bottom: -44px;
 
-        @include transition(box-shadow);
-    }
+    @include flex($justify-content: space-between, $flex-direction: column);
+    @include transition(box-shadow);
+  }
 }
