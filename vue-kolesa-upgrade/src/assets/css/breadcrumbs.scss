@@ -1,0 +1,15 @@
+.breadcrumbs {
+  &__link {
+    color: $blue;
+    margin-right: $sm-margin;
+    text-decoration: none;
+
+    @include font(14px, 24px, 400);
+
+    &:not(:last-child) {
+      &::after {
+        content: '/';
+      }
+    }
+  }
+}
