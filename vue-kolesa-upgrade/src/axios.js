@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const token = 'rhhrmjvdvcv0ka4e6ouao9a1gj42fbjim5bcu60f';
+const token = '2bdd2ygcm4ma510igkoy8drgtgy6qd4mowmgqkc8';
 
 const instance = axios.create({
   baseURL: 'https://api.json-generator.com',
