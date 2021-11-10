@@ -1,41 +1,43 @@
 .help-btns {
-    &__btn {
-        width: 100%;
-        height: 76px;
-        margin-right: $xl-margin;
+  &__btn {
+    width: 100%;
+    height: 76px;
+    margin-right: $xl-margin;
+    color: inherit;
+    text-decoration: none;
 
-        @include transition(transform);
-        @include flex($align-items: center, $justify-content: flex-start);
+    @include transition(transform);
+    @include flex($align-items: center, $justify-content: flex-start);
 
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &:hover {
-            transform: scale(1.02);
-        }
-
-        &::before {
-            content: '';
-            display: block;
-            width: 48px;
-            height: 56px;
-            margin-right: $lg-margin;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        &:nth-child(1)::before {
-            background-image: url(./assets/images/plus.png);
-        }
-
-        &:nth-child(2)::before {
-            background-image: url(./assets/images/help.png);
-        }
-
-        &:nth-child(3)::before {
-            background-image: url(./assets/images/gift.png);
-        }
+    &:last-child {
+      margin-right: 0;
     }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 56px;
+      margin-right: $lg-margin;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url(./assets/images/plus.png);
+    }
+
+    &:nth-child(2)::before {
+      background-image: url(./assets/images/help.png);
+    }
+
+    &:nth-child(3)::before {
+      background-image: url(./assets/images/gift.png);
+    }
+  }
 }

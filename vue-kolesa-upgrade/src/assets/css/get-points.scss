@@ -1,0 +1,14 @@
+.get-points {
+  &__title {
+    margin-top: $xl-padding;
+    margin-bottom: $lg-padding;
+
+    @include font(20px, 32px, 600);
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: $xl-margin;
+  }
+}

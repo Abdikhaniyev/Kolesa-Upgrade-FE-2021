@@ -27,16 +27,19 @@
 
           <button
             @click="order"
-            class="btn btn--small btn--primary modal__action js__modal__action"
+            class="btn btn--small modal__action js__modal__action"
+            :class="buttonClass"
             type="button"
           >
-            Заказать
+            {{ label }}
           </button>
 
           <div class="modal__balance">
             <div class="modal__balance-container">
               <span class="modal__balance-title"> Твой баланс: </span>
-              <span class="modal__balance-value"> {{ userData.score }} баллов </span>
+              <span class="modal__balance-value">
+                {{ this.$store.state.userInfo.score }} баллов
+              </span>
             </div>
           </div>
         </div>
@@ -110,7 +113,21 @@ export default {
   props: {
     isShowModal: Boolean,
     cardData: Object,
-    userData: Object,
+  },
+  computed: {
+    label() {
+      const { score } = this.$store.state.userInfo;
+
+      return score >= this.cardData.price
+        ? 'Заказать'
+        : `Попросить ${this.cardData.price - score} баллов`;
+    },
+
+    buttonClass() {
+      const { score } = this.$store.state.userInfo;
+
+      return score >= this.cardData.price ? 'btn--primary' : 'btn--yellow';
+    },
   },
   methods: {
     closeModal() {
@@ -118,14 +135,14 @@ export default {
     },
 
     order() {
-      if (this.userData.score >= this.cardData.price) {
-        this.userData.score -= this.cardData.price;
+      const { score } = this.$store.state.userInfo;
+
+      if (score >= this.cardData.price) {
+        this.$store.commit('setNewScore', this.cardData.price);
       } else {
-        alert('Поработай и приходи обратно когда будут деньги! ❤️');
+        this.$emit('close-modal');
       }
     },
   },
 };
 </script>
-
-<style></style>
