@@ -17,5 +17,3 @@ export default {
   name: 'HotButtons',
 };
 </script>
-
-<style></style>

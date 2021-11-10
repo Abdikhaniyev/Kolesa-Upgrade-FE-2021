@@ -12,7 +12,9 @@
         </router-link>
       </li>
       <li class="nav__item">
-        <router-link to="/" class="nav__link" active-class="active"> Kolesa Shop </router-link>
+        <router-link to="/" exact class="nav__link" active-class="active">
+          Kolesa Shop
+        </router-link>
       </li>
       <li class="nav__item">
         <router-link to="/company_picture" class="nav__link" active-class="active">
@@ -49,5 +51,3 @@ export default {
   name: 'Sidebar',
 };
 </script>
-
-<style></style>

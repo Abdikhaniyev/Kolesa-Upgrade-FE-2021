@@ -140,11 +140,9 @@ export default {
       if (score >= this.cardData.price) {
         this.$store.commit('setNewScore', this.cardData.price);
       } else {
-        this.isShowModal = false;
+        this.$emit('close-modal');
       }
     },
   },
 };
 </script>
-
-<style></style>
