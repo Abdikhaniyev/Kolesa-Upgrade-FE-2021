@@ -1,5 +1,4 @@
 import '../css/style.css';
+import bigUntestableCode from './bigUntestableCode';
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello, Kolesa Upgrade!</h1>
-`;
+bigUntestableCode();
