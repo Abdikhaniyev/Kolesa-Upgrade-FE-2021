@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Группа тестов для DOM. Тест на добавление контента 1`] = `
+<body>
+  <div
+    id="app"
+    style="display: block;"
+  >
+    Kolesa Group
+  </div>
+</body>
+`;
