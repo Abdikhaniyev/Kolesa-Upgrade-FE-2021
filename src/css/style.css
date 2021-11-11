@@ -1,8 +1,48 @@
-#app {
+body {
+    padding: 0;
+    margin: 0;
     font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+#app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+}
+
+#error {
+    padding: 16px;
+    margin: 0 auto;
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    border-radius: 8px;
+    max-width: 1020px;
+}
+
+.container {
     margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+button {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    margin: 0 8px;
+    background-color: #2a81dd;
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+button:hover,
+button:focus,
+button:active {
+    background-color: #fff;
+    border-color: #2a81dd;
+    color: #2a81dd;
 }
